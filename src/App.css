@@ -1,6 +1,29 @@
+:root {
+  --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  background: hsl(0, 0%, 10%);
+  margin: 0;
+  padding: 10px;
+}
+
 .App {
-  background: hsl(0, 0%, 80%);
+  background: hsl(270, 10%, 20%);
   border-radius: 20px;
+  color: white;
+  font-family: var(--system-ui);
   margin: 0 auto;
   max-width: 800px;
   padding: 2rem;
