@@ -1,0 +1,14 @@
+.edit-button {
+  background: hsl(0, 0%, 10%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+}
