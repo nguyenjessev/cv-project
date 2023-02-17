@@ -1,3 +1,32 @@
 .full-name {
-  position: relative;
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.name-container {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.name-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.name-input-container > input {
+  background: hsl(270, 10%, 15%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  flex-basis: 0;
+  flex-grow: 1;
+  font-size: inherit;
+  font-weight: inherit;
+  max-width: 100%;
+  min-width: 10rem;
+  padding: 0 1rem;
 }

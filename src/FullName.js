@@ -1,6 +1,6 @@
 import React from 'react';
 import './FullName.css';
-import EditButton from './EditButton';
+import Button from './Button';
 
 class FullName extends React.Component {
   constructor(props) {
@@ -10,31 +10,77 @@ class FullName extends React.Component {
       firstName: 'First',
       lastName: 'Last',
       hovered: false,
+      editing: false,
     };
   }
 
-  showEditButton = () => {
+  handleMouseEnter = () => {
     this.setState({ hovered: true });
   };
 
-  hideEditButton = () => {
+  handleMouseLeave = () => {
     this.setState({ hovered: false });
+  };
+
+  handleFirstNameChange = (event) => {
+    this.setState({
+      firstName: event.target.value,
+    });
+  };
+
+  handleLastNameChange = (event) => {
+    this.setState({
+      lastName: event.target.value,
+    });
+  };
+
+  fullName = () => {
+    if (this.state.editing) {
+      return (
+        <div className='name-container name-input-container'>
+          <input
+            type='text'
+            value={this.state.firstName}
+            onChange={this.handleFirstNameChange}
+          />
+          <input
+            type='text'
+            value={this.state.lastName}
+            onChange={this.handleLastNameChange}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className='name-container'>
+          {this.state.firstName} {this.state.lastName}
+        </div>
+      );
+    }
+  };
+
+  handleClickEdit = () => {
+    this.setState({
+      editing: !this.state.editing,
+    });
   };
 
   render() {
     return (
       <header
         className='full-name'
-        onMouseEnter={this.showEditButton}
-        onMouseLeave={this.hideEditButton}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
       >
-        <h1>
-          {this.state.firstName} {this.state.lastName}
-        </h1>
+        {this.fullName()}
 
-        {this.state.hovered && <EditButton />}
+        {this.state.hovered && !this.state.editing && (
+          <Button name='Edit' onClick={this.handleClickEdit} />
+        )}
 
-        {/* {this.editButton()} */}
+        {this.state.editing && (
+          <Button name='Save' onClick={this.handleClickEdit} />
+        )}
       </header>
     );
   }
