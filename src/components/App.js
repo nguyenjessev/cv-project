@@ -1,4 +1,5 @@
 import '../styles/App.css';
+import Education from './Education';
 import FullName from './FullName';
 import PersonalInfo from './PersonalInfo';
 
@@ -12,6 +13,8 @@ function App() {
       <PersonalInfo />
 
       <hr />
+
+      <Education />
     </div>
   );
 }
