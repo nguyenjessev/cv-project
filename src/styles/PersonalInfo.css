@@ -1,9 +1,12 @@
 .personal-info-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .personal-info-container > * {
+  flex-basis: 25%;
   flex-grow: 1;
   min-width: 120px;
 }

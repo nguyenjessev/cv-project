@@ -1,0 +1,9 @@
+.email-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.email-display {
+  margin-top: 0.5rem;
+}

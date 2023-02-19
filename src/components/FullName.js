@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/FullName.css';
-import EditButton from './EditButton';
-import SaveButton from './SaveButton';
+import Button from './Button';
 
 class FullName extends React.Component {
   constructor(props) {
@@ -10,18 +9,9 @@ class FullName extends React.Component {
     this.state = {
       firstName: 'First',
       lastName: 'Last',
-      hovered: false,
       editing: false,
     };
   }
-
-  handleMouseEnter = () => {
-    this.setState({ hovered: true });
-  };
-
-  handleMouseLeave = () => {
-    this.setState({ hovered: false });
-  };
 
   handleFirstNameChange = (event) => {
     this.setState({
@@ -74,18 +64,16 @@ class FullName extends React.Component {
 
   render() {
     return (
-      <header
-        className='full-name'
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
-      >
+      <header className='full-name'>
         {this.fullName()}
 
-        {this.state.hovered && !this.state.editing && (
-          <EditButton onClick={this.handleClickEdit} />
+        {!this.state.editing && (
+          <Button name='Edit' onClick={this.handleClickEdit} />
         )}
 
-        {this.state.editing && <SaveButton onClick={this.handleClickSave} />}
+        {this.state.editing && (
+          <Button name='Save' onClick={this.handleClickSave} />
+        )}
       </header>
     );
   }
