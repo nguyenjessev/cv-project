@@ -1,5 +1,5 @@
 import React from 'react';
-import './FullName.css';
+import '../styles/FullName.css';
 import Button from './Button';
 
 class FullName extends React.Component {
