@@ -1,0 +1,9 @@
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.phone-display {
+  margin-top: 0.5rem;
+}

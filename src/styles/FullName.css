@@ -1,5 +1,4 @@
 .full-name {
-  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -15,6 +14,7 @@
 
 .name-input-container {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   gap: 1rem;
   max-width: 100%;
@@ -25,11 +25,11 @@
   border: none;
   border-radius: 10px;
   color: white;
-  flex-basis: 0;
   flex-grow: 1;
   font-size: inherit;
   font-weight: inherit;
   max-width: 100%;
   min-width: 10rem;
   padding: 0 1rem;
+  width: 0;
 }
