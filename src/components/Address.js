@@ -74,11 +74,6 @@ class Address extends React.Component {
           />
           <input
             type='text'
-            value={this.state.lineOne}
-            onChange={this.handleCityChange}
-          />
-          <input
-            type='text'
             value={this.state.city}
             onChange={this.handleCityChange}
           />

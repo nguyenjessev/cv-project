@@ -22,6 +22,7 @@ body {
 input {
   background: hsl(270, 10%, 15%);
   border: none;
+  border-radius: 5px;
   color: white;
   font-size: inherit;
   font-weight: inherit;

@@ -10,6 +10,8 @@ function App() {
       <hr />
 
       <PersonalInfo />
+
+      <hr />
     </div>
   );
 }
