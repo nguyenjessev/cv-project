@@ -26,7 +26,7 @@ class Phone extends React.Component {
 
   handlePhoneChange = (event) => {
     this.setState({
-      email: event.target.value,
+      phone: event.target.value,
     });
   };
 

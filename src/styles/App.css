@@ -19,6 +19,16 @@ body {
   padding: 10px;
 }
 
+input {
+  background: hsl(270, 10%, 15%);
+  border: none;
+  color: white;
+  font-size: inherit;
+  font-weight: inherit;
+  max-width: 100%;
+  padding: 0;
+}
+
 .App {
   background: hsl(270, 10%, 20%);
   border-radius: 20px;

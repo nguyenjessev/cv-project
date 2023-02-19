@@ -1,0 +1,13 @@
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.address-display {
+  margin-top: 0.5rem;
+}
+
+.address-input-container > input:nth-child(n + 2) {
+  margin-top: 0.5rem;
+}
