@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/FullName.css';
-import Button from './Button';
+import EditButton from './EditButton';
+import SaveButton from './SaveButton';
 
 class FullName extends React.Component {
   constructor(props) {
@@ -61,7 +62,13 @@ class FullName extends React.Component {
 
   handleClickEdit = () => {
     this.setState({
-      editing: !this.state.editing,
+      editing: true,
+    });
+  };
+
+  handleClickSave = () => {
+    this.setState({
+      editing: false,
     });
   };
 
@@ -75,12 +82,10 @@ class FullName extends React.Component {
         {this.fullName()}
 
         {this.state.hovered && !this.state.editing && (
-          <Button name='Edit' onClick={this.handleClickEdit} />
+          <EditButton onClick={this.handleClickEdit} />
         )}
 
-        {this.state.editing && (
-          <Button name='Save' onClick={this.handleClickEdit} />
-        )}
+        {this.state.editing && <SaveButton onClick={this.handleClickSave} />}
       </header>
     );
   }

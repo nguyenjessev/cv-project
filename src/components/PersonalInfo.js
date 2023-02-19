@@ -2,6 +2,7 @@ import React from 'react';
 import Email from './Email';
 import Phone from './Phone.js';
 import Address from './Address.js';
+import '../styles/PersonalInfo.css';
 
 class PersonalInfo extends React.Component {
   render() {

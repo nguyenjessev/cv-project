@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Button.css';
+import '../styles/EditButton.css';
 
-class Button extends React.Component {
+class EditButton extends React.Component {
   render() {
     return (
       <button
@@ -9,10 +9,10 @@ class Button extends React.Component {
         className='edit-button'
         onClick={this.props.onClick}
       >
-        {this.props.name}
+        Edit
       </button>
     );
   }
 }
 
-export default Button;
+export default EditButton;
