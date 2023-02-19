@@ -52,9 +52,9 @@ class FullName extends React.Component {
       );
     } else {
       return (
-        <div className='name-container'>
+        <h1 className='name-container'>
           {this.state.firstName} {this.state.lastName}
-        </div>
+        </h1>
       );
     }
   };

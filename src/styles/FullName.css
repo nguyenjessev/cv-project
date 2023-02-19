@@ -3,11 +3,13 @@
   display: flex;
   gap: 1rem;
   justify-content: space-between;
+  padding-bottom: 1rem;
 }
 
 .name-container {
   font-size: 2rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .name-input-container {
