@@ -1,6 +1,8 @@
 .education-entry {
   background: hsl(270, 10%, 30%);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   width: 100%;
 }
@@ -9,6 +11,26 @@
 .major,
 .notes {
   margin: 0;
+}
+
+#school-name-input {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#major-input {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+#notes-input {
+  margin: 0.5rem 0;
+}
+
+.school-name {
+  display: flex;
+  justify-content: space-between;
 }
 
 .major {
