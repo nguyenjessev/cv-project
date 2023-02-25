@@ -26,6 +26,24 @@ class EducationEntry extends React.Component {
     });
   };
 
+  handleSchoolNameChange = (event) => {
+    this.setState({
+      schoolName: event.target.value,
+    });
+  };
+
+  handleMajorChange = (event) => {
+    this.setState({
+      major: event.target.value,
+    });
+  };
+
+  handleNotesChange = (event) => {
+    this.setState({
+      notes: event.target.value,
+    });
+  };
+
   entry = () => {
     if (this.state.editing) {
       return (
@@ -35,18 +53,21 @@ class EducationEntry extends React.Component {
             name='school-name-input'
             id='school-name-input'
             value={this.state.schoolName}
+            onChange={this.handleSchoolNameChange}
           />
           <input
             type='text'
             name='major-input'
             id='major-input'
             value={this.state.major}
+            onChange={this.handleMajorChange}
           />
           <textarea
             type='text'
             name='notes-input'
             id='notes-input'
             value={this.state.notes}
+            onChange={this.handleNotesChange}
           />
           <Button name='Save' onClick={this.handleClickSave} />
         </div>
