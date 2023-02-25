@@ -1,0 +1,16 @@
+.education-entry {
+  background: hsl(270, 10%, 30%);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.school-name,
+.major,
+.notes {
+  margin: 0;
+}
+
+.major {
+  font-style: italic;
+}
